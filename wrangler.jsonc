@@ -1,0 +1,17 @@
+{
+  "name": "nexc0re",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // [RESOLVED Cloudflare Error 10143] 
+  // Drop the problematic WORKER_SELF_REFERENCE service binding to nexcore-app.
+  // Since nexcore-app does not exist under this tenant and nexc0re is the active worker,
+  // we securely drop/empty the services array to avoid deployment blockers in the CI/CD pipeline.
+  "services": []
+}
