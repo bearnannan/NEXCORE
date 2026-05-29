@@ -1,11 +1,3 @@
-// [RESOLVED TypeScript build safety]
-// Export a plain config object to ensure 'tsc --noEmit' compiles perfectly
-// in local development environments where the global 'open-next' package is not installed.
-const config = {
-  default: {
-    minify: true,
-    placement: 'global',
-  },
-};
+import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
-export default config;
+export default defineCloudflareConfig({});
