@@ -19,6 +19,7 @@ export function getIncidentConfig() {
     smtpPassword: process.env.SMTP_PASSWORD || "",
     fallbackEmailTo:
       process.env.NOTIFICATION_EMAIL_TO || process.env.FALLBACK_EMAIL_TO || "",
+    resendApiKey: process.env.RESEND_API_KEY || "",
   };
 }
 
@@ -34,6 +35,9 @@ function applySystemSettings(
   }
   if (settings.fallback_email_to) {
     config.fallbackEmailTo = settings.fallback_email_to;
+  }
+  if ((settings as any).resend_api_key) {
+    config.resendApiKey = (settings as any).resend_api_key;
   }
 }
 

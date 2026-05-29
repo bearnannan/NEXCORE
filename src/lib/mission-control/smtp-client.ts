@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import { formatThaiDate, getStatusColor, getStatusLabelTh } from "./line-format";
 import { getIncidentConfigAsync } from "./config";
 import { recordNotificationAttempt } from "./notification-attempts";
@@ -250,20 +249,20 @@ export function generateEmailHtmlTemplate(incident: Record<string, unknown>, fai
   `;
 }
 
-// Dispatches a fallback SMTP alert email
+// Dispatches a fallback HTML email via Brevo REST API (HTTP)
 export async function sendEmailFallbackNotification(
   incident: Record<string, unknown>,
   failureReason = "",
   correlationId = `corr-${Math.random().toString(36).substring(2, 10)}`
 ): Promise<{ success: boolean; channel: string; message: string }> {
   const config = await getIncidentConfigAsync();
-  const smtpUser = config.smtpUser;
-  const smtpPass = config.smtpPassword;
+  const apiKey = process.env.BREVO_API_KEY || config.smtpPassword;
   const emailTo = config.fallbackEmailTo || "dopa-only-tm@forth.co.th";
+  const senderEmail = process.env.BREVO_SENDER_EMAIL || "saweksoot@gmail.com";
 
-  if (!smtpUser || !smtpPass) {
-    const errorMsg = "Missing SMTP_USER or SMTP_PASSWORD in system settings";
-    console.error(`[SMTP Client] [${correlationId}] ${errorMsg}`);
+  if (!apiKey) {
+    const errorMsg = "Missing BREVO_API_KEY in environment or system settings";
+    console.error(`[Brevo Client] [${correlationId}] ${errorMsg}`);
 
     await recordNotificationAttempt({
       incidentId: incident.id as string,
@@ -277,40 +276,49 @@ export async function sendEmailFallbackNotification(
     return { success: false, channel: "smtp_fallback", message: errorMsg };
   }
 
-  // Create transporter for Microsoft 365 Relay
-  const transporter = nodemailer.createTransport({
-    host: config.smtpHost,
-    port: config.smtpPort,
-    secure: config.smtpPort === 465,
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-    tls: {
-      ciphers: "SSLv3",
-      rejectUnauthorized: false
-    }
-  });
-
   const htmlContent = generateEmailHtmlTemplate(incident, failureReason);
 
-  try {
-    console.log(`[SMTP Client] [${correlationId}] Dispatching fallback HTML email to: ${emailTo}...`);
+  const payload = {
+    sender: {
+      name: "NexCore Mission Control",
+      email: senderEmail
+    },
+    to: [
+      {
+        email: emailTo
+      }
+    ],
+    subject: `🚨 [Notification Fallback] [${incident.incident_no || "NEW"}] ${incident.station as string}`,
+    htmlContent: htmlContent
+  };
 
-    const info = await transporter.sendMail({
-      from: `"NexCore Mission Control" <${smtpUser}>`,
-      to: emailTo,
-      subject: `🚨 [Notification Fallback] [${incident.incident_no || "NEW"}] ${incident.station as string}`,
-      html: htmlContent,
+  try {
+    console.log(`[Brevo Client] [${correlationId}] Dispatching fallback HTML email via HTTP REST to: ${emailTo}...`);
+
+    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        "accept": "application/json",
+        "api-key": apiKey,
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(payload)
     });
 
-    console.log(`[SMTP Client] [${correlationId}] Fallback email dispatched successfully! MessageID: ${info.messageId}`);
+    const responseText = await response.text();
+
+    if (!response.ok) {
+      throw new Error(`Brevo HTTP Error ${response.status}: ${responseText}`);
+    }
+
+    const data = JSON.parse(responseText);
+    console.log(`[Brevo Client] [${correlationId}] Fallback email dispatched successfully! MessageID: ${data.messageId}`);
 
     await recordNotificationAttempt({
       incidentId: incident.id as string,
       channel: "smtp_fallback",
       status: "success",
-      message: `Email sent successfully: ${info.messageId}`,
+      message: `Email sent successfully: ${data.messageId}`,
       correlationId,
       tokenSource: "env_or_system_settings",
     });
@@ -318,17 +326,17 @@ export async function sendEmailFallbackNotification(
     return {
       success: true,
       channel: "smtp_fallback",
-      message: `Sent successfully: ${info.messageId}`,
+      message: `Sent successfully: ${data.messageId}`,
     };
   } catch (err: unknown) {
     const errStr = err instanceof Error ? err.message : String(err);
-    console.error(`[SMTP Client] [${correlationId}] Failed to send fallback email: ${errStr}`);
+    console.error(`[Brevo Client] [${correlationId}] Failed to send fallback email: ${errStr}`);
 
     await recordNotificationAttempt({
       incidentId: incident.id as string,
       channel: "smtp_fallback",
       status: "error",
-      message: `SMTP Error: ${errStr}`,
+      message: `Brevo REST Error: ${errStr}`,
       correlationId,
       tokenSource: "env_or_system_settings",
     });

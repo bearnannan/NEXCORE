@@ -108,19 +108,19 @@ export async function POST(request: Request) {
 
     const { data: stationData, error: stationErr } = await supabase
       .from("stations")
-      .select("id, station_name, province, district, latitude, longitude, code")
-      .ilike("station_name", `%${stationName}%`)
+      .select("id, name, province, district, latitude, longitude, code")
+      .ilike("name", `%${stationName}%`)
       .limit(1);
 
     if (!stationErr && stationData && stationData.length > 0) {
       const station = stationData[0];
       assetId = station.id;
-      assetName = station.station_name;
+      assetName = station.name;
       province = station.province;
       district = station.district;
       latitude = station.latitude;
       longitude = station.longitude;
-      console.log(`[Webhook] [${correlationId}] Linked to Station: ${station.station_name} (${station.code})`);
+      console.log(`[Webhook] [${correlationId}] Linked to Station: ${station.name} (${station.code})`);
     } else {
       console.log(`[Webhook] [${correlationId}] Station matching "${stationName}" not found. Creating unmapped incident.`);
     }

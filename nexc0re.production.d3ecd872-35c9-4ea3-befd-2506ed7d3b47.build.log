@@ -1,0 +1,423 @@
+2026-05-28T11:04:10.675Z	Initializing build environment...
+2026-05-28T11:04:12.084Z	Success: Finished initializing build environment
+2026-05-28T11:04:13.111Z	Cloning repository...
+2026-05-28T11:04:14.424Z	Restoring from dependencies cache
+2026-05-28T11:04:14.427Z	Restoring from build output cache
+2026-05-28T11:04:16.730Z	Detected the following tools from environment: bun@1.3.14, nodejs@22.16.0
+2026-05-28T11:04:16.730Z	Installing bun 1.3.14
+2026-05-28T11:04:18.947Z	Installing project dependencies: bun install --frozen-lockfile
+2026-05-28T11:04:19.030Z	bun install v1.3.14 (0d9b296a)
+2026-05-28T11:04:23.227Z	
+2026-05-28T11:04:23.231Z	+ @playwright/test@1.60.0
+2026-05-28T11:04:23.232Z	+ @tailwindcss/postcss@4.3.0
+2026-05-28T11:04:23.232Z	+ @testing-library/jest-dom@6.9.1
+2026-05-28T11:04:23.232Z	+ @testing-library/react@16.3.2
+2026-05-28T11:04:23.233Z	+ @types/leaflet@1.9.21
+2026-05-28T11:04:23.234Z	+ @types/leaflet.markercluster@1.5.6
+2026-05-28T11:04:23.234Z	+ @types/node@20.19.41
+2026-05-28T11:04:23.234Z	+ @types/nodemailer@8.0.0
+2026-05-28T11:04:23.235Z	+ @types/react@19.2.15
+2026-05-28T11:04:23.235Z	+ @types/react-dom@19.2.3
+2026-05-28T11:04:23.235Z	+ @vitejs/plugin-react@6.0.2
+2026-05-28T11:04:23.236Z	+ eslint@9.39.4
+2026-05-28T11:04:23.236Z	+ eslint-config-next@16.2.6
+2026-05-28T11:04:23.239Z	+ jsdom@29.1.1
+2026-05-28T11:04:23.239Z	+ tailwindcss@4.3.0
+2026-05-28T11:04:23.239Z	+ typescript@5.9.3
+2026-05-28T11:04:23.239Z	+ vitest@4.1.7
+2026-05-28T11:04:23.239Z	+ @supabase/supabase-js@2.106.2
+2026-05-28T11:04:23.240Z	+ @tanstack/react-query@5.100.14
+2026-05-28T11:04:23.243Z	+ class-variance-authority@0.7.1
+2026-05-28T11:04:23.243Z	+ clsx@2.1.1
+2026-05-28T11:04:23.244Z	+ leaflet@1.9.4
+2026-05-28T11:04:23.245Z	+ leaflet.markercluster@1.5.3
+2026-05-28T11:04:23.245Z	+ lucide-react@1.16.0
+2026-05-28T11:04:23.246Z	+ next@16.2.6
+2026-05-28T11:04:23.246Z	+ next-auth@5.0.0-beta.31
+2026-05-28T11:04:23.246Z	+ next-themes@0.4.6
+2026-05-28T11:04:23.246Z	+ nodemailer@8.0.9
+2026-05-28T11:04:23.247Z	+ radix-ui@1.4.3
+2026-05-28T11:04:23.247Z	+ react@19.2.4
+2026-05-28T11:04:23.250Z	+ react-dom@19.2.4
+2026-05-28T11:04:23.250Z	+ react-leaflet@5.0.0
+2026-05-28T11:04:23.250Z	+ shadcn@4.8.1
+2026-05-28T11:04:23.251Z	+ sonner@2.0.7
+2026-05-28T11:04:23.251Z	+ tailwind-merge@3.6.0
+2026-05-28T11:04:23.251Z	+ tw-animate-css@1.4.0
+2026-05-28T11:04:23.251Z	+ zod@4.4.3
+2026-05-28T11:04:23.251Z	
+2026-05-28T11:04:23.251Z	788 packages installed [4.20s]
+2026-05-28T11:04:23.422Z	Executing user build command: bun run build
+2026-05-28T11:04:23.500Z	$ next build
+2026-05-28T11:04:24.047Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-05-28T11:04:24.051Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2026-05-28T11:04:24.051Z	This information is used to shape Next.js' roadmap and prioritize features.
+2026-05-28T11:04:24.051Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-05-28T11:04:24.051Z	https://nextjs.org/telemetry
+2026-05-28T11:04:24.051Z	
+2026-05-28T11:04:24.069Z	▲ Next.js 16.2.6 (Turbopack)
+2026-05-28T11:04:24.069Z	
+2026-05-28T11:04:24.149Z	  Creating an optimized production build ...
+2026-05-28T11:04:34.399Z	✓ Compiled successfully in 10.0s
+2026-05-28T11:04:34.412Z	  Running TypeScript ...
+2026-05-28T11:04:41.254Z	  Finished TypeScript in 6.8s ...
+2026-05-28T11:04:41.259Z	  Collecting page data using 1 worker ...
+2026-05-28T11:04:41.774Z	  Generating static pages using 1 worker (0/7) ...
+2026-05-28T11:04:41.924Z	  Generating static pages using 1 worker (1/7) 
+2026-05-28T11:04:41.966Z	  Generating static pages using 1 worker (3/7) 
+2026-05-28T11:04:41.970Z	  Generating static pages using 1 worker (5/7) 
+2026-05-28T11:04:41.971Z	✓ Generating static pages using 1 worker (7/7) in 197ms
+2026-05-28T11:04:41.977Z	  Finalizing page optimization ...
+2026-05-28T11:04:41.983Z	
+2026-05-28T11:04:41.986Z	Route (app)
+2026-05-28T11:04:41.986Z	┌ ○ /
+2026-05-28T11:04:41.986Z	├ ○ /_not-found
+2026-05-28T11:04:41.986Z	├ ƒ /api/auth/[...nextauth]
+2026-05-28T11:04:41.986Z	├ ƒ /api/auth/reset-session
+2026-05-28T11:04:41.986Z	├ ƒ /api/incidents
+2026-05-28T11:04:41.986Z	├ ƒ /api/incidents/[id]
+2026-05-28T11:04:41.986Z	├ ƒ /api/incidents/health
+2026-05-28T11:04:41.987Z	├ ƒ /api/incidents/webhook
+2026-05-28T11:04:41.987Z	├ ƒ /api/stations
+2026-05-28T11:04:41.987Z	├ ○ /incidents
+2026-05-28T11:04:41.987Z	├ ƒ /mission-control
+2026-05-28T11:04:41.987Z	└ ƒ /sign-in
+2026-05-28T11:04:41.988Z	
+2026-05-28T11:04:41.988Z	
+2026-05-28T11:04:41.988Z	○  (Static)   prerendered as static content
+2026-05-28T11:04:41.988Z	ƒ  (Dynamic)  server-rendered on demand
+2026-05-28T11:04:41.988Z	
+2026-05-28T11:04:42.215Z	Success: Build command completed
+2026-05-28T11:04:42.418Z	Executing user deploy command: npx wrangler deploy
+2026-05-28T11:04:44.179Z	npm warn exec The following package was not found and will be installed: wrangler@4.95.0
+2026-05-28T11:04:51.639Z	
+2026-05-28T11:04:51.639Z	 ⛅️ wrangler 4.95.0
+2026-05-28T11:04:51.639Z	───────────────────
+2026-05-28T11:04:51.650Z	
+2026-05-28T11:04:51.650Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2026-05-28T11:04:51.802Z	
+2026-05-28T11:04:51.802Z	Detected Project Settings:
+2026-05-28T11:04:51.803Z	 - Worker Name: nexc0re
+2026-05-28T11:04:51.803Z	 - Framework: Next.js
+2026-05-28T11:04:51.803Z	 - Build Command: bun run build
+2026-05-28T11:04:51.803Z	 - Output Directory: .next
+2026-05-28T11:04:51.803Z	
+2026-05-28T11:04:51.803Z	? Do you want to modify these settings?
+2026-05-28T11:04:51.803Z	🤖 Using fallback value in non-interactive context: no
+2026-05-28T11:04:51.805Z	
+2026-05-28T11:04:51.805Z	📦 Install packages:
+2026-05-28T11:04:51.806Z	 - wrangler (devDependency)
+2026-05-28T11:04:51.806Z	
+2026-05-28T11:04:51.806Z	📝 Update package.json scripts:
+2026-05-28T11:04:51.806Z	 - "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+2026-05-28T11:04:51.806Z	 - "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+2026-05-28T11:04:51.806Z	
+2026-05-28T11:04:51.806Z	📄 Create wrangler.jsonc:
+2026-05-28T11:04:51.806Z	  {
+2026-05-28T11:04:51.806Z	    "$schema": "node_modules/wrangler/config-schema.json",
+2026-05-28T11:04:51.807Z	    "name": "nexc0re",
+2026-05-28T11:04:51.807Z	    "compatibility_date": "2026-05-28",
+2026-05-28T11:04:51.807Z	    "observability": {
+2026-05-28T11:04:51.807Z	      "enabled": true
+2026-05-28T11:04:51.807Z	    },
+2026-05-28T11:04:51.807Z	    "compatibility_flags": [
+2026-05-28T11:04:51.807Z	      "nodejs_compat"
+2026-05-28T11:04:51.807Z	    ]
+2026-05-28T11:04:51.807Z	  }
+2026-05-28T11:04:51.807Z	
+2026-05-28T11:04:51.808Z	🛠️  Configuring project for Next.js with OpenNext by running `@opennextjs/cloudflare migrate`
+2026-05-28T11:04:51.808Z	
+2026-05-28T11:04:51.808Z	? Proceed with setup?
+2026-05-28T11:04:51.808Z	🤖 Using fallback value in non-interactive context: yes
+2026-05-28T11:04:53.522Z	Resolving dependencies
+2026-05-28T11:04:55.823Z	Resolved, downloaded and extracted [1098]
+2026-05-28T11:04:56.391Z	Saved lockfile
+2026-05-28T11:04:58.273Z	
+2026-05-28T11:04:58.273Z	┌───────────────────────────────┐
+2026-05-28T11:04:58.273Z	│ OpenNext — Cloudflare migrate │
+2026-05-28T11:04:58.273Z	└───────────────────────────────┘
+2026-05-28T11:04:58.273Z	
+2026-05-28T11:04:58.273Z	🚀 Setting up the OpenNext Cloudflare adapter...
+2026-05-28T11:04:58.273Z	
+2026-05-28T11:04:58.281Z	⚙️  Installing dependencies...
+2026-05-28T11:04:58.281Z	
+2026-05-28T11:04:58.285Z	bun add v1.3.14 (0d9b296a)
+2026-05-28T11:04:58.291Z	Resolving dependencies
+2026-05-28T11:04:58.779Z	Resolved, downloaded and extracted [383]
+2026-05-28T11:04:59.927Z	Saved lockfile
+2026-05-28T11:04:59.928Z	
+2026-05-28T11:04:59.928Z	+ @playwright/test@1.60.0
+2026-05-28T11:04:59.928Z	+ @tailwindcss/postcss@4.3.0
+2026-05-28T11:04:59.928Z	+ @testing-library/jest-dom@6.9.1
+2026-05-28T11:04:59.928Z	+ @testing-library/react@16.3.2
+2026-05-28T11:04:59.929Z	+ @types/leaflet@1.9.21
+2026-05-28T11:04:59.929Z	+ @types/leaflet.markercluster@1.5.6
+2026-05-28T11:04:59.929Z	+ @types/node@20.19.41 (v25.9.1 available)
+2026-05-28T11:04:59.929Z	+ @types/nodemailer@8.0.0
+2026-05-28T11:04:59.929Z	+ @types/react@19.2.15
+2026-05-28T11:04:59.929Z	+ @types/react-dom@19.2.3
+2026-05-28T11:04:59.929Z	+ @vitejs/plugin-react@6.0.2
+2026-05-28T11:04:59.929Z	+ eslint@9.39.4
+2026-05-28T11:04:59.929Z	+ eslint-config-next@16.2.6
+2026-05-28T11:04:59.929Z	+ jsdom@29.1.1
+2026-05-28T11:04:59.929Z	+ tailwindcss@4.3.0
+2026-05-28T11:04:59.929Z	+ typescript@5.9.3
+2026-05-28T11:04:59.929Z	+ vitest@4.1.7
+2026-05-28T11:04:59.930Z	+ wrangler@4.95.0
+2026-05-28T11:04:59.930Z	+ @supabase/supabase-js@2.106.2
+2026-05-28T11:04:59.930Z	+ @tanstack/react-query@5.100.14
+2026-05-28T11:04:59.930Z	+ class-variance-authority@0.7.1
+2026-05-28T11:04:59.930Z	+ clsx@2.1.1
+2026-05-28T11:04:59.930Z	+ leaflet@1.9.4
+2026-05-28T11:04:59.930Z	+ leaflet.markercluster@1.5.3
+2026-05-28T11:04:59.931Z	+ lucide-react@1.16.0
+2026-05-28T11:04:59.931Z	+ next@16.2.6
+2026-05-28T11:04:59.931Z	+ next-auth@5.0.0-beta.31
+2026-05-28T11:04:59.931Z	+ next-themes@0.4.6
+2026-05-28T11:04:59.931Z	+ nodemailer@8.0.9
+2026-05-28T11:04:59.931Z	+ radix-ui@1.4.3
+2026-05-28T11:04:59.931Z	+ react@19.2.4
+2026-05-28T11:04:59.931Z	+ react-dom@19.2.4
+2026-05-28T11:04:59.931Z	+ react-leaflet@5.0.0
+2026-05-28T11:04:59.931Z	+ shadcn@4.8.1
+2026-05-28T11:04:59.931Z	+ sonner@2.0.7
+2026-05-28T11:04:59.931Z	+ tailwind-merge@3.6.0
+2026-05-28T11:04:59.932Z	+ tw-animate-css@1.4.0
+2026-05-28T11:04:59.932Z	+ zod@4.4.3
+2026-05-28T11:04:59.932Z	
+2026-05-28T11:04:59.933Z	installed @opennextjs/cloudflare@1.19.11 with binaries:
+2026-05-28T11:04:59.933Z	 - opennextjs-cloudflare
+2026-05-28T11:04:59.933Z	
+2026-05-28T11:04:59.933Z	976 packages installed [1.64s]
+2026-05-28T11:04:59.947Z	bun add v1.3.14 (0d9b296a)
+2026-05-28T11:04:59.958Z	Resolving dependencies
+2026-05-28T11:04:59.979Z	Resolved, downloaded and extracted [1]
+2026-05-28T11:05:01.097Z	Saved lockfile
+2026-05-28T11:05:01.097Z	
+2026-05-28T11:05:01.097Z	+ @playwright/test@1.60.0
+2026-05-28T11:05:01.097Z	+ @tailwindcss/postcss@4.3.0
+2026-05-28T11:05:01.098Z	+ @testing-library/jest-dom@6.9.1
+2026-05-28T11:05:01.098Z	+ @testing-library/react@16.3.2
+2026-05-28T11:05:01.098Z	+ @types/leaflet@1.9.21
+2026-05-28T11:05:01.098Z	+ @types/leaflet.markercluster@1.5.6
+2026-05-28T11:05:01.098Z	+ @types/node@20.19.41
+2026-05-28T11:05:01.098Z	+ @types/nodemailer@8.0.0
+2026-05-28T11:05:01.098Z	+ @types/react@19.2.15
+2026-05-28T11:05:01.098Z	+ @types/react-dom@19.2.3
+2026-05-28T11:05:01.098Z	+ @vitejs/plugin-react@6.0.2
+2026-05-28T11:05:01.098Z	+ eslint@9.39.4
+2026-05-28T11:05:01.098Z	+ eslint-config-next@16.2.6
+2026-05-28T11:05:01.098Z	+ jsdom@29.1.1
+2026-05-28T11:05:01.098Z	+ tailwindcss@4.3.0
+2026-05-28T11:05:01.098Z	+ typescript@5.9.3
+2026-05-28T11:05:01.098Z	+ vitest@4.1.7
+2026-05-28T11:05:01.098Z	+ @opennextjs/cloudflare@1.19.11
+2026-05-28T11:05:01.099Z	+ @supabase/supabase-js@2.106.2
+2026-05-28T11:05:01.099Z	+ @tanstack/react-query@5.100.14
+2026-05-28T11:05:01.099Z	+ class-variance-authority@0.7.1
+2026-05-28T11:05:01.099Z	+ clsx@2.1.1
+2026-05-28T11:05:01.099Z	+ leaflet@1.9.4
+2026-05-28T11:05:01.099Z	+ leaflet.markercluster@1.5.3
+2026-05-28T11:05:01.100Z	+ lucide-react@1.16.0
+2026-05-28T11:05:01.100Z	+ next@16.2.6
+2026-05-28T11:05:01.100Z	+ next-auth@5.0.0-beta.31
+2026-05-28T11:05:01.100Z	+ next-themes@0.4.6
+2026-05-28T11:05:01.100Z	+ nodemailer@8.0.9
+2026-05-28T11:05:01.100Z	+ radix-ui@1.4.3
+2026-05-28T11:05:01.100Z	+ react@19.2.4
+2026-05-28T11:05:01.100Z	+ react-dom@19.2.4
+2026-05-28T11:05:01.100Z	+ react-leaflet@5.0.0
+2026-05-28T11:05:01.101Z	+ shadcn@4.8.1
+2026-05-28T11:05:01.101Z	+ sonner@2.0.7
+2026-05-28T11:05:01.101Z	+ tailwind-merge@3.6.0
+2026-05-28T11:05:01.101Z	+ tw-animate-css@1.4.0
+2026-05-28T11:05:01.101Z	+ zod@4.4.3
+2026-05-28T11:05:01.101Z	
+2026-05-28T11:05:01.101Z	installed wrangler@4.95.0 with binaries:
+2026-05-28T11:05:01.101Z	 - wrangler
+2026-05-28T11:05:01.101Z	 - wrangler2
+2026-05-28T11:05:01.101Z	
+2026-05-28T11:05:01.101Z	976 packages installed [1152.00ms]
+2026-05-28T11:05:01.102Z	⚙️  Creating wrangler.jsonc...
+2026-05-28T11:05:01.102Z	
+2026-05-28T11:05:04.291Z	WARN Failed to set up cache for your project.
+2026-05-28T11:05:04.291Z	After the migration completes, please manually setup cache in  wrangler.jsonc and open-next.config.ts files (for more details see: https://opennext.js.org/cloudflare/caching).
+2026-05-28T11:05:04.291Z	
+2026-05-28T11:05:04.291Z	⚙️  Creating open-next.config.ts...
+2026-05-28T11:05:04.292Z	
+2026-05-28T11:05:04.301Z	⚙️  Creating .dev.vars file...
+2026-05-28T11:05:04.301Z	
+2026-05-28T11:05:04.302Z	⚙️  Creating public/_headers file...
+2026-05-28T11:05:04.302Z	
+2026-05-28T11:05:04.302Z	⚙️  Updating package.json scripts...
+2026-05-28T11:05:04.302Z	
+2026-05-28T11:05:04.303Z	⚙️  Updating .gitignore file...
+2026-05-28T11:05:04.303Z	
+2026-05-28T11:05:04.303Z	⚙️  Updating Next.js config...
+2026-05-28T11:05:04.303Z	
+2026-05-28T11:05:04.303Z	⚙️  Checking for edge runtime usage...
+2026-05-28T11:05:04.303Z	
+2026-05-28T11:05:04.307Z	🎉 OpenNext Cloudflare adapter complete!
+2026-05-28T11:05:04.307Z	
+2026-05-28T11:05:04.307Z	Next steps:
+2026-05-28T11:05:04.307Z	- Run: "bun preview" to build and preview your Cloudflare application locally
+2026-05-28T11:05:04.307Z	- Run: "bun deploy" to deploy your application to Cloudflare Workers
+2026-05-28T11:05:04.307Z	- ⚠️  Setup cache, see https://opennext.js.org/cloudflare/caching for more details
+2026-05-28T11:05:04.307Z	
+2026-05-28T11:05:04.342Z	[build] Running: bunx opennextjs-cloudflare build
+2026-05-28T11:05:05.909Z	[build] 
+2026-05-28T11:05:05.909Z	[build] ┌─────────────────────────────┐
+2026-05-28T11:05:05.909Z	[build] │ OpenNext — Cloudflare build │
+2026-05-28T11:05:05.909Z	[build] └─────────────────────────────┘
+2026-05-28T11:05:05.909Z	[build] 
+2026-05-28T11:05:05.909Z	[build] 
+2026-05-28T11:05:05.994Z	[build] App directory: /opt/buildhome/repo
+2026-05-28T11:05:05.994Z	[build] Next.js version : 16.2.6
+2026-05-28T11:05:05.994Z	[build] 
+2026-05-28T11:05:05.995Z	[build] @opennextjs/cloudflare version: 1.19.11
+2026-05-28T11:05:05.996Z	[build] @opennextjs/aws version: 4.0.2
+2026-05-28T11:05:05.996Z	[build] workerd compatibility_date: 2026-05-28
+2026-05-28T11:05:05.996Z	[build] 
+2026-05-28T11:05:05.997Z	[build] 
+2026-05-28T11:05:05.997Z	[build] ┌─────────────────────────────────┐
+2026-05-28T11:05:05.997Z	[build] │ OpenNext — Building Next.js app │
+2026-05-28T11:05:05.997Z	[build] └─────────────────────────────────┘
+2026-05-28T11:05:05.997Z	[build] 
+2026-05-28T11:05:05.997Z	[build] 
+2026-05-28T11:05:06.003Z	[build] $ next build
+2026-05-28T11:05:06.003Z	[build] 
+2026-05-28T11:05:06.394Z	[build] ▲ Next.js 16.2.6 (Turbopack)
+2026-05-28T11:05:06.395Z	[build] 
+2026-05-28T11:05:06.399Z	[build] 
+2026-05-28T11:05:06.400Z	[build] 
+2026-05-28T11:05:06.459Z	[build]   Creating an optimized production build ...
+2026-05-28T11:05:06.459Z	[build] 
+2026-05-28T11:05:07.336Z	[build] Using secrets defined in .dev.vars
+2026-05-28T11:05:07.337Z	[build] 
+2026-05-28T11:05:17.648Z	[build] ✓ Compiled successfully in 10.0s
+2026-05-28T11:05:17.651Z	[build] 
+2026-05-28T11:05:17.661Z	[build]   Running TypeScript ...
+2026-05-28T11:05:17.661Z	[build] 
+2026-05-28T11:05:25.740Z	[build]   Finished TypeScript in 8.1s ...
+2026-05-28T11:05:25.740Z	[build] 
+2026-05-28T11:05:25.743Z	[build]   Collecting page data using 1 worker ...
+2026-05-28T11:05:25.743Z	[build] 
+2026-05-28T11:05:26.271Z	[build]   Generating static pages using 1 worker (0/7) ...
+2026-05-28T11:05:26.272Z	[build] 
+2026-05-28T11:05:26.429Z	[build]   Generating static pages using 1 worker (1/7) 
+2026-05-28T11:05:26.431Z	[build] 
+2026-05-28T11:05:26.468Z	[build]   Generating static pages using 1 worker (3/7) 
+2026-05-28T11:05:26.471Z	[build] 
+2026-05-28T11:05:26.473Z	[build]   Generating static pages using 1 worker (5/7) 
+2026-05-28T11:05:26.475Z	[build] 
+2026-05-28T11:05:26.475Z	[build] ✓ Generating static pages using 1 worker (7/7) in 208ms
+2026-05-28T11:05:26.475Z	[build] 
+2026-05-28T11:05:26.487Z	[build]   Finalizing page optimization ...
+2026-05-28T11:05:26.488Z	[build] 
+2026-05-28T11:05:26.955Z	[build] 
+2026-05-28T11:05:26.955Z	[build] 
+2026-05-28T11:05:26.956Z	[build] Route (app)
+2026-05-28T11:05:26.956Z	[build] ┌ ○ /
+2026-05-28T11:05:26.957Z	[build] ├ ○ /_not-found
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/auth/[...nextauth]
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/auth/reset-session
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/incidents
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/incidents/[id]
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/incidents/health
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/incidents/webhook
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /api/stations
+2026-05-28T11:05:26.957Z	[build] ├ ○ /incidents
+2026-05-28T11:05:26.957Z	[build] ├ ƒ /mission-control
+2026-05-28T11:05:26.957Z	[build] └ ƒ /sign-in
+2026-05-28T11:05:26.957Z	[build] 
+2026-05-28T11:05:26.963Z	[build] 
+2026-05-28T11:05:26.963Z	[build] 
+2026-05-28T11:05:26.963Z	[build] ○  (Static)   prerendered as static content
+2026-05-28T11:05:26.963Z	[build] ƒ  (Dynamic)  server-rendered on demand
+2026-05-28T11:05:26.963Z	[build] 
+2026-05-28T11:05:26.964Z	[build] 
+2026-05-28T11:05:27.040Z	[build] 
+2026-05-28T11:05:27.040Z	[build] ┌──────────────────────────────┐
+2026-05-28T11:05:27.040Z	[build] │ OpenNext — Generating bundle │
+2026-05-28T11:05:27.040Z	[build] └──────────────────────────────┘
+2026-05-28T11:05:27.040Z	[build] 
+2026-05-28T11:05:27.041Z	[build] 
+2026-05-28T11:05:27.083Z	[build] Bundling middleware function...
+2026-05-28T11:05:27.083Z	[build] 
+2026-05-28T11:05:27.122Z	[build] Bundling static assets...
+2026-05-28T11:05:27.122Z	[build] 
+2026-05-28T11:05:27.138Z	[build] Bundling cache assets...
+2026-05-28T11:05:27.139Z	[build] 
+2026-05-28T11:05:27.149Z	[build] Building server function: default...
+2026-05-28T11:05:27.149Z	[build] 
+2026-05-28T11:05:30.083Z	[build] Applying code patches: 2.596s
+2026-05-28T11:05:30.085Z	[build] 
+2026-05-28T11:05:30.434Z	[build] # copyPackageTemplateFiles
+2026-05-28T11:05:30.434Z	[build] 
+2026-05-28T11:05:30.439Z	[build] ⚙️ Bundling the OpenNext server...
+2026-05-28T11:05:30.439Z	[build] 
+2026-05-28T11:05:30.440Z	[build] 
+2026-05-28T11:05:32.579Z	[build] Worker saved in `.open-next/worker.js` 🚀
+2026-05-28T11:05:32.579Z	[build] 
+2026-05-28T11:05:32.579Z	[build] 
+2026-05-28T11:05:32.580Z	[build] OpenNext build complete.
+2026-05-28T11:05:32.580Z	[build] 
+2026-05-28T11:05:32.701Z	OpenNext project detected, calling `opennextjs-cloudflare deploy`
+2026-05-28T11:05:34.984Z	
+2026-05-28T11:05:34.984Z	┌──────────────────────────────┐
+2026-05-28T11:05:34.984Z	│ OpenNext — Cloudflare deploy │
+2026-05-28T11:05:34.984Z	└──────────────────────────────┘
+2026-05-28T11:05:34.984Z	
+2026-05-28T11:05:35.025Z	Using secrets defined in .dev.vars
+2026-05-28T11:05:35.353Z	Incremental cache does not need populating
+2026-05-28T11:05:35.355Z	Tag cache does not need populating
+2026-05-28T11:05:36.200Z	
+2026-05-28T11:05:36.200Z	 ⛅️ wrangler 4.95.0
+2026-05-28T11:05:36.200Z	───────────────────
+2026-05-28T11:05:38.413Z	🌀 Building list of assets...
+2026-05-28T11:05:38.415Z	✨ Read 56 files from the assets directory /opt/buildhome/repo/.open-next/assets
+2026-05-28T11:05:38.436Z	🌀 Starting asset upload...
+2026-05-28T11:05:39.981Z	🌀 Found 1 new or modified static asset to upload. Proceeding with upload...
+2026-05-28T11:05:39.981Z	+ /BUILD_ID
+2026-05-28T11:05:40.499Z	Uploaded 1 of 1 asset
+2026-05-28T11:05:40.499Z	✨ Success! Uploaded 1 file (49 already uploaded) (0.52 sec)
+2026-05-28T11:05:40.499Z	
+2026-05-28T11:05:40.686Z	Total Upload: 8626.74 KiB / gzip: 1774.62 KiB
+2026-05-28T11:05:41.702Z	Your Worker has access to the following bindings:
+2026-05-28T11:05:41.702Z	Binding                                      Resource      
+2026-05-28T11:05:41.702Z	env.WORKER_SELF_REFERENCE (nexcore-app)      Worker        
+2026-05-28T11:05:41.702Z	env.IMAGES                                   Images        
+2026-05-28T11:05:41.702Z	env.ASSETS                                   Assets        
+2026-05-28T11:05:41.702Z	
+2026-05-28T11:05:41.708Z	
+2026-05-28T11:05:41.820Z	✘ [ERROR] A request to the Cloudflare API (/accounts/28653dfceef67280b57fc0e304f485bb/workers/scripts/nexc0re/versions) failed.
+2026-05-28T11:05:41.820Z	
+2026-05-28T11:05:41.820Z	  Service binding 'WORKER_SELF_REFERENCE' references Worker 'nexcore-app' which was not found. Verify the Worker exists in your account and that the service name in your configuration is correct. [code: 10143]
+2026-05-28T11:05:41.820Z	  To learn more about this error, visit: https://developers.cloudflare.com/workers/configuration/bindings/about-service-bindings/
+2026-05-28T11:05:41.820Z	
+2026-05-28T11:05:41.820Z	  
+2026-05-28T11:05:41.820Z	  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+2026-05-28T11:05:41.820Z	
+2026-05-28T11:05:41.820Z	
+2026-05-28T11:05:41.820Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-05-28_11-05-35_965.log"
+2026-05-28T11:05:41.820Z	ERROR Wrangler deploy command failed:
+2026-05-28T11:05:41.820Z	✘ [ERROR] A request to the Cloudflare API (/accounts/28653dfceef67280b57fc0e304f485bb/workers/scripts/nexc0re/versions) failed.
+2026-05-28T11:05:41.821Z	
+2026-05-28T11:05:41.821Z	  Service binding 'WORKER_SELF_REFERENCE' references Worker 'nexcore-app' which was not found. Verify the Worker exists in your account and that the service name in your configuration is correct. [code: 10143]
+2026-05-28T11:05:41.821Z	  To learn more about this error, visit: https://developers.cloudflare.com/workers/configuration/bindings/about-service-bindings/
+2026-05-28T11:05:41.821Z	
+2026-05-28T11:05:41.821Z	  
+2026-05-28T11:05:41.821Z	  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+2026-05-28T11:05:41.821Z	
+2026-05-28T11:05:41.821Z	
+2026-05-28T11:05:41.821Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-05-28_11-05-35_965.log"
+2026-05-28T11:05:41.821Z	
+2026-05-28T11:05:41.985Z	
+2026-05-28T11:05:42.036Z	✘ [ERROR] 
+2026-05-28T11:05:42.036Z	
+2026-05-28T11:05:42.036Z	
+2026-05-28T11:05:42.051Z	If you think this is a bug then please create an issue at https://github.com/cloudflare/workers-sdk/issues/new/choose
+2026-05-28T11:05:42.055Z	? Would you like to report this error to Cloudflare? Wrangler's output and the error details will be shared with the Wrangler team to help us diagnose and fix the issue.
+2026-05-28T11:05:42.055Z	🤖 Using fallback value in non-interactive context: no
+2026-05-28T11:05:42.067Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-05-28_11-04-51_356.log"
+2026-05-28T11:05:42.244Z	Failed: error occurred while running deploy command

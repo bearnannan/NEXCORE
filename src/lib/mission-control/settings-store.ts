@@ -47,5 +47,7 @@ export async function readLocalSystemSettings(): Promise<SystemSettings> {
 
 export async function writeLocalSystemSettings(settings: SystemSettings): Promise<void> {
   await mkdir(path.dirname(SETTINGS_FILE), { recursive: true });
-  await writeFile(SETTINGS_FILE, JSON.stringify(normalizeSystemSettings(settings), null, 2), "utf8");
+  // Exclude sensitive LINE tokens from local disk storage for security compliance
+  const secureSettings = { ...settings, LINE_TOKEN: "", line_backup_token: "" };
+  await writeFile(SETTINGS_FILE, JSON.stringify(normalizeSystemSettings(secureSettings), null, 2), "utf8");
 }

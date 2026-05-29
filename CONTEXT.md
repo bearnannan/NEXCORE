@@ -22,4 +22,20 @@ A LINE Flex Message is a structured push notification with rich layout capabilit
 
 ## Email Fallback Notification
 
-An Email Fallback Notification is a responsive HTML-formatted alert dispatched via Microsoft 365 SMTP to dopa-only-tm@forth.co.th in the event of a LINE API delivery failure, quota exhaustion, or operational timeout.
+An Email Fallback Notification is a responsive HTML-formatted alert dispatched via Microsoft 365 SMTP to [dopa-only-tm@forth.co.th](mailto:dopa-only-tm@forth.co.th) in the event of a LINE API delivery failure, quota exhaustion, or operational timeout.
+
+## System Settings
+
+System Settings represent dynamic configuration parameters stored in the `public.system_settings` table. They allow Operations Operators to toggle operational flags (e.g., pausing push notifications, configuring fallback overrides) directly from the administration card without redeploying the application.
+
+## Incident Webhook
+
+An Incident Webhook is a public integration endpoint (`POST /api/incidents/webhook`) that receives automated logs and alerts from external systems in either JSON or URL-encoded form data. It parses legacy/Thai payload keys, archives the raw payload in Supabase, and dispatches real-time LINE Flex notifications.
+
+## Retro-Neon Palette
+
+The Retro-Neon Palette is the core visual design language of the interface. It utilizes high-contrast neon styling to encode operational urgency:
+
+- **เสร็จสิ้น (Resolved)**: Neon Green (`#00ff88`)
+- **รอดำเนินการ (Pending)**: Neon Yellow (`#f0e800`)
+- **กำลังดำเนินการ (In Progress)**: Neon Cyan (`#00f0ff`)

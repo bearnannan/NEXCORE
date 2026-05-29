@@ -77,14 +77,14 @@ export async function POST(request: Request) {
 
   const { data: stationData } = await supabase
     .from("stations")
-    .select("id, station_name, province, district, latitude, longitude")
-    .ilike("station_name", `%${stationName}%`)
+    .select("id, name, province, district, latitude, longitude")
+    .ilike("name", `%${stationName}%`)
     .limit(1);
 
   if (stationData && stationData.length > 0) {
     const station = stationData[0];
     assetId = station.id;
-    assetName = station.station_name;
+    assetName = station.name;
     province = station.province;
     district = station.district;
     latitude = station.latitude;

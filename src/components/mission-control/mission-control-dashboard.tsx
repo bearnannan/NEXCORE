@@ -18,6 +18,8 @@ import {
   ShieldCheck,
   ShieldAlert,
   MapPinOff,
+  Settings,
+  Download,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +65,9 @@ import {
 import { missionControlKeys } from "@/lib/mission-control/query-keys";
 import { IncidentCreateDrawer } from "./IncidentCreateDrawer";
 import type { IncidentCreatePayload } from "./IncidentCreateForm";
+import LineBotSettingsModal from "./LineBotSettingsModal";
+import { useExport, type ExportCategory } from "@/hooks/useExport";
+import { ExportModal } from "./ExportModal";
 import type {
   Incident,
   IncidentFilters,
@@ -105,6 +110,22 @@ function DashboardContent({ operatorName }: DashboardProps) {
     null,
   );
   const [isCreateDrawerOpen, setIsCreateDrawerOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [activeExportCategory, setActiveExportCategory] = useState<ExportCategory>('incident');
+  const {
+    isExportModalOpen,
+    setIsExportModalOpen,
+    exportType,
+    setExportType,
+    selectedExportStations,
+    setSelectedExportStations,
+    expandedDistricts,
+    setExpandedDistricts,
+    handleExportTXT,
+    handleExportPDF,
+    handleExportJPEG,
+    handleExportCSV
+  } = useExport();
 
   const createMutation = useMutation({
     mutationFn: async (payload: IncidentCreatePayload) => {
@@ -553,6 +574,28 @@ function DashboardContent({ operatorName }: DashboardProps) {
           <Button
             variant="outline"
             size="sm"
+            onClick={() => setIsSettingsOpen(true)}
+            className="h-8 border-yellow-500/30 bg-yellow-500/10 text-yellow-200 hover:bg-yellow-500/20"
+            title="LINE Bot Settings"
+            aria-label="LINE Bot Settings"
+          >
+            <Settings className="size-3.5" />
+          </Button>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setIsExportModalOpen(true)}
+            className="h-8 border-cyan-500/30 bg-cyan-500/10 text-cyan-200 hover:bg-cyan-500/20"
+            title="Export Data"
+            aria-label="Export Data"
+          >
+            <Download className="size-3.5" />
+          </Button>
+
+          <Button
+            variant="outline"
+            size="sm"
             onClick={() => setIsCreateDrawerOpen(true)}
             className="h-8 border-cyan-500/30 bg-cyan-500/10 text-cyan-200 hover:bg-cyan-500/20"
           >
@@ -687,6 +730,29 @@ function DashboardContent({ operatorName }: DashboardProps) {
         isPending={createMutation.isPending}
         onSubmit={(payload) => createMutation.mutate(payload)}
         selectedStationId={selectedStationId}
+      />
+
+      <LineBotSettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+      />
+
+      <ExportModal
+        isOpen={isExportModalOpen}
+        onClose={() => setIsExportModalOpen(false)}
+        exportType={exportType}
+        setExportType={setExportType}
+        selectedExportStations={selectedExportStations}
+        setSelectedExportStations={setSelectedExportStations}
+        expandedDistricts={expandedDistricts}
+        setExpandedDistricts={setExpandedDistricts}
+        stations={stations}
+        incidents={incidents}
+        activeCategory={activeExportCategory}
+        handleExportTXT={handleExportTXT}
+        handleExportCSV={handleExportCSV}
+        handleExportPDF={handleExportPDF}
+        handleExportJPEG={handleExportJPEG}
       />
     </div>
   );

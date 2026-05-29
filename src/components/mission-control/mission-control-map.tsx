@@ -45,10 +45,10 @@ export function MissionControlMap({
 
   return (
     <MapContainer
-      center={[13.5, 101]}
-      zoom={6}
-      minZoom={5}
-      maxZoom={12}
+      center={[15.0000, 100.5000]}
+      zoom={0}
+      minZoom={0}
+      maxZoom={20}
       scrollWheelZoom
       className="h-full w-full"
     >
@@ -303,6 +303,7 @@ function MarkerClusterGroup({
 
 function FitStationBounds({ stations }: { stations: StationWithIncidents[] }) {
   const map = useMap();
+  const isInitialRef = useRef(true);
 
   // Create a stable serialized dependency key based on station coordinates
   const stationsKey = useMemo(() => {
@@ -320,7 +321,12 @@ function FitStationBounds({ stations }: { stations: StationWithIncidents[] }) {
       );
 
     if (points.length > 0) {
-      map.fitBounds(points, { padding: [36, 36], maxZoom: 7 });
+      // Enforce MapContainer's default nationwide center & zoom on initial load
+      if (isInitialRef.current) {
+        isInitialRef.current = false;
+        return;
+      }
+      map.fitBounds(points, { padding: [50, 50], maxZoom: 5 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stationsKey, map]);
